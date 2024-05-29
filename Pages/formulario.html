@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" href="../imagenes/favicon.ico">
+        <title>Consultas y/o sugerencias</title>
+    </head>
+    <body>
+        <div class="formulario">
+            <header class="encabezado">
+                <div>
+                    <img src="../imagenes/turismo-rural-argentina.jpg" alt="designer">
+                </div>
+                <div class="contenedorPrincipal">
+                    <nav class="menu-simple-menu">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="https://weather.com/es-AR/tiempo/hoy/l/ARBA0009:1:AR" target="_blank">Estado del tiempo</a></li>
+                            <li><a href="../pages/quienesSomos.html">Quiénes somos?</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <section>
+                <h1><b>FORMULARIO DE CONSULTAS Y/O SUGERENCIAS</b></h1>
+                <br><br>
+                <form action="">
+                    <fieldset>
+                        <legend><b>DATOS PERSONALES</b></legend>
+                        <br>
+                        <label for="id_nombre">Nombre (*)</label>
+                            <input type="text" name="nombre" id="id_nombre"> <br><br>
+                        <label for="id_apellido">Apellido (*)</label>
+                            <input type="text" name="apellido" id="id_apellido" > <br> <br>
+                        
+                        <label for="tipodni"> Doc. tipo(*)
+                            <select name="tipodni" id="tipodni"><br>
+                                <option value="dni">DNI</option>
+                                <option value="libretaenrolamiento">LIB. DE ENROLAMIENTO</option>
+                                <option value="cedula">CEDULA</option>
+                                <option value="pasaporte" disabled>PASAPORTE</option>
+                            </select><br><br>
+                        </label>
+                        <label for="dni">Número Dni (*)
+                            <input type="number" name="dni" id="dni" min="1000000" max="300000000" placeholder="Sólo números"> <br>
+                        </label>
+                        <br>
+                        <label for="id_correo">Correo Electrónico</label>
+                            <input type="email" name="correo" id="id_correo" placeholder="Correo electrónico" title="Este campo es requerido"
+                            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required> <br><br>
+                        <label for="cel">Teléfono
+                            <input type="number" name="cel" id="cel" placeholder="Sólo números"> <br><br>
+                        </label>
+                        <br>
+                        <label for="residencia"> Zona de Residencia:
+                            <input type="radio" name="residencia" id="residencia" value="1"> CABA
+                            <input type="radio" name="residencia" id="residencia2" value="2"> Prov. de Buenos Aires
+                            <input type="radio" name="residencia" id="residencia3" value="3"> Gran Buenos Aires
+                            <input type="radio" name="residencia" id="residencia4" value="4"> Interior
+                        </label><br><br>
+                        <small>(*) Campos obligatorios.</small><br><br>
+                    </fieldset>
+                </form>
+            </section>
+            <div>    
+            <form action="">
+            <br><br>
+            <fieldset>
+                <legend><b>CONSULTAS Y/O SUGERENCIAS</b></legend>
+                <br><br>
+                <label for="adjunto">Adjuntar foto
+                    <input type="file" name="adjunto" id="adjunto"><br>
+                </label>
+                <br><br>
+                <label for="comentarios">Escriba sus comentarios y/o sugerencias 
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+                </label>
+                <br><br>
+                
+            </fieldset>
+                <input type="submit" onclick= "return enviarFormulario(); " value="Enviar datos">
+                <input type="reset" value="Borrar campos">
+            </form>
+            <div id = "error"></div>
+
+        </div>
+                
+    </div>
+    <script src="../js/validacion.js"></script>   
+</body>
+</html>
